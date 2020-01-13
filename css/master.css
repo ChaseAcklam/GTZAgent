@@ -167,7 +167,7 @@ a:hover {
   justify-content: space-between;
   box-shadow: 2px 5px 10px #666;
   border-radius: 10px;
-  background-color: rgba(230, 230, 230, 0.5);
+  background-color: rgba(210, 210, 210, 0.5);
   cursor: pointer;
   transition: all 200ms ease;
 }
@@ -289,14 +289,20 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 5rem;
-  height: 40rem;
-  width: 90%;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  width: 80%;
+  background-color: rgba(210, 210, 210, 0.5);
 }
 
 .laptop-bg img {
   width: 60%;
+}
 
+.column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .left_box {
@@ -304,8 +310,9 @@ a:hover {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  width: 60%;
-  height: 35rem;
+  width: 70%;
+  height: auto;
+  padding: 0 3rem;
   background-color: rgba(255, 102, 0, 0.9);
 }
 
@@ -315,12 +322,12 @@ a:hover {
   font-weight: bold;
 }
 
-.left_box p {
+.column p {
+  margin-top: 2rem;
   width: 95%;
-  color: white;
+  color: black;
   font-size: 1.2rem;
   font-weight: normal;
-  margin-top: 0;
 }
 
 .logo_content {
@@ -349,6 +356,7 @@ a:hover {
 
 .left_fade p {
   color: white;
+  width: 90%;
   font-size: 1.3rem;
   font-weight: normal;
 }
@@ -358,9 +366,10 @@ a:hover {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  color: black;
   width: 50%;
   height: 24rem;
-  background-color: rgba(230, 230, 230, 0.5);
+  background-color: rgba(210, 210, 210, 0.5);
 }
 
 .center_fade h3 {
@@ -370,9 +379,25 @@ a:hover {
 }
 
 .center_fade p {
-  color: white;
+  width: 90%;
+  color: black;
   font-size: 1.3rem;
   font-weight: normal;
+}
+
+.image_container {
+  width: 100%;
+}
+
+.center_fade img {
+  width: 10rem;
+  margin: 2rem 3rem;
+}
+
+.split {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*-- Footer --*/
