@@ -43,6 +43,18 @@ $(window).scroll(function(){
     $(".logo").css("opacity", 1 - $(window).scrollTop() / 150);
   });
 
+  $(document).ready(function(){
+    $("#instruct_start").click(function(){
+      $(".prerequisite").css("display","flex");
+    });
+
+    $('html, body').animate({
+      scrollTop: ($('.prerequisite').offset().top)
+  });
+  });
+
+
+
 </script>
 </head>
 <body>
@@ -182,7 +194,7 @@ $(window).scroll(function(){
           <p>Creating a website can feel overwhelming. Don't be concerned, we will guide you through the entire process!
              Our in-house website developers will lead you down the correct path.</p>
           <div class="go_button">
-            <a href="#">Go ➜</a>
+          <a href="#prerequisite"> <button class="main_button" id="instruct_start">Go ➜</button></a>
           </div>
         </div>
       </div>
@@ -193,7 +205,7 @@ $(window).scroll(function(){
           <p>Your website often sets the first impression for your company. What are you conveying to
             your prospects and customers? If you're not satisfied and need a refresh - we've got you covered. </p>
           <div class="go_button">
-            <a href="#">Go ➜</a>
+              <button class="main_button" id="instruct_build">Go ➜</button>
           </div>
         </div>
         </div>
@@ -204,17 +216,19 @@ $(window).scroll(function(){
           <p>SalesDrip specializes in the freight & logistics industry and we know what content resonates
              with traffic managers. Our websites are hand made from scratch by our own in-house developers.</p>
           <div class="go_button">
-            <a href="#">Go ➜</a>
+            <button class="main_button" id="instruct_about">Go ➜</button>
           </div>
         </div>
       </div>
     </div>
     </div>
     <div class="start" data-aos="fade-up" data-aos-delay="100">
-      <h2><img src="https://app.salesdrip.com/users/myteam42369/Media1717.png" alt="">We're exprienced in providing <br>solutions to GlobalTranz Agents </h2>
-       <p> SalesDrip's front end development team has provided numerous solutions to many of the
-         top performing GlobalTranz Agents. We understand..</p>
+      <h2 style="width: 60%;"><img src="https://app.salesdrip.com/users/myteam42369/Media1717.png" alt="">Providing solutions to GlobalTranz Agents for the past four years: </h2>
+       <div class="container">
+         <p> We are very familiar with the unique needs and requirements of GlobalTranz agents. We provide two solutions specific to GlobalTranz Agents</p>
+       </div>
     </div>
+    <div id="prerequisite"></div>
     <div class="prerequisite">
       <div class="laptop-bg">
         <div class="column">
