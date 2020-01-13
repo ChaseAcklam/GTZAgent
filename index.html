@@ -43,6 +43,8 @@ $(window).scroll(function(){
     $(".logo").css("opacity", 1 - $(window).scrollTop() / 150);
   });
 
+
+
   $(document).ready(function(){
     $("#instruct_start").click(function(){
       $(".prerequisite").css("display","flex");
@@ -52,6 +54,45 @@ $(window).scroll(function(){
       scrollTop: ($('.prerequisite').offset().top)
   });
   });
+
+  $(document).ready(function(){
+    $("#crm_auto").click(function(){
+      $(".CRM").fadeIn().css("display", "flex");
+      $(".webDev").fadeOut().css("display", "none");
+    });
+
+  });
+
+  $(document).ready(function(){
+    $("#webDev").click(function(){
+      $(".CRM").fadeOut().css("display", "none");
+      $(".webDev").fadeIn().css("display", "flex");
+    });
+
+  });
+
+
+
+  $(document).ready(function(){
+    $("#crm_auto").click(function(){
+      $('.count').each(function () {
+    $(this).prop('Counter', 0).animate({
+            Counter: $(this).data('value')
+        }, {
+        duration: 800,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+    });
+
+  });
+
+
+
+
 
 
 
@@ -182,6 +223,9 @@ $(window).scroll(function(){
   <div class="page_content">
     <div class="logo">
       <img src="https://app.salesdrip.com/users/myteam42369/Media1716.svg" alt="">
+  <div class="mousey">
+    <div class="scroller"></div>
+  </div>
     </div>
     <div class="resources" data-aos="fadeIn" data-aos-anchor-placement="top-center">
       <p> <span style="font-weight: 300; letter-spacing: .4rem; color: #666; font-size: 2rem;">
@@ -223,10 +267,57 @@ $(window).scroll(function(){
     </div>
     </div>
     <div class="start" data-aos="fade-up" data-aos-delay="100">
-      <h2 style="width: 60%;"><img src="https://app.salesdrip.com/users/myteam42369/Media1717.png" alt="">Providing solutions to GlobalTranz Agents for the past four years: </h2>
-       <div class="container">
-         <p> We are very familiar with the unique needs and requirements of GlobalTranz agents. We provide two solutions specific to GlobalTranz Agents</p>
-       </div>
+      <h2 style="width: 60%;"><img src="https://app.salesdrip.com/users/myteam42369/Media1710.png" alt="">Providing solutions to GlobalTranz <br>Agents for the past four years: </h2>
+      <div class="options">
+        <button id="crm_auto">CRM that includes Sales & Marketing Automation</button>
+        <button id="webDev">Website Design, Development & Hosting</button>
+      </div>
+      <div class="solution_boxes">
+        <div class="solution">
+          <div class="webDev">
+          <div class="white_box">
+            SalesDrip is a cloud based CRM platform that incorporates a proven automated sales & drip marketing system.<br><br>
+             Our marketing team writes 60 drip marketing emails that match your website's branding and our dev team builds
+             custom automation to fit the needs and processes of individual agents. <br> <br>We provide unlimited training,
+             customer service and tech support at no additional cost. <br> <br> <a href="#">Schedule a Demo ⇨</a>
+          </div>
+
+          </div>
+        </div>
+
+        <div class="solution">
+          <div class="CRM">
+            <div class="box">
+              <div class="section" style="width: 25%;">
+                <div class="row" style="background-color: white; height: 100%; border-top-left-radius: 10px;">
+                <div class="count" data-value="4">
+                  0
+                </div>
+                <span style="font-size: 9rem; color: #ff6600; font-weight: 900; margin-top: 5rem;">YRs</span>
+                </div>
+              </div>
+              <div class="section large" style="width: 75%; display: flex; justify-content: center; align-items: flex-end; text-align: center;">
+                <p>Serving GlobalTranz Agents</p>
+              </div>
+            </div>
+            <div class="box_content">
+              <div class="half" style="border-right: 5px solid #ff6600;">
+                <p>SalesDrip is a cloud based CRM platform that incorporates a proven automated sales & drip marketing system.
+                <br><br>
+                Our marketing team writes 60 drip marketing emails that match your website's branding and our dev team
+                builds custom automation to fit the needs and processes of individual agents.</p>
+              </div>
+              <div class="half" style="display: flex; flex-direction: column; background-color: #444; color: white; border-left: 5px solid #ff6600;">
+                <span style="width: 80%; font-weight: 900;">We provide unlimited training, customer service and tech support at no additional cost.</span> <br><br>
+                <a href="#">Schedule a Demo ⇨</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
     </div>
     <div id="prerequisite"></div>
     <div class="prerequisite">
