@@ -309,7 +309,9 @@ button:focus {
   margin-top: 3rem;
   padding: 1.5rem;
   border-radius: 5px;
-  font-size: 1rem;
+  border: 5px solid #444;
+  font-size: 1.4rem;
+  font-weight: bold;
   color: white;
   background-color: #444;
   cursor: pointer;
@@ -321,26 +323,27 @@ button:focus {
 }
 
 #crm_auto:hover {
-  background-position: 100%;
+  border-color: #ff6600;
 }
 
 #webDev {
   margin-top: 3rem;
   padding: 1.5rem;
   border-radius: 5px;
-  font-size: 1rem;
+  font-weight: bold;
+  border: 5px solid #444;
+  font-size: 1.4rem;
   color: white;
   background-color: #444;
   cursor: pointer;
   background-image: url("https://app.salesdrip.com/users/myteam42369/Media1714.png");
   background-repeat: no-repeat;
-  background-position: 400% -100%;
   background-size: cover;
   transition: all 300ms ease-in;
 }
 
 #webDev:hover {
-    background-position: 100%;
+    border-color: #ff6600;
 }
 
 .solution {
@@ -350,6 +353,7 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 1300px;
 }
 
 
@@ -410,7 +414,7 @@ button:focus {
 }
 
 .half p {
-  width: 100%;
+  width: 90%;
   margin: 0;
   font-size: 1.4rem;
 }
@@ -466,13 +470,49 @@ button:focus {
 }
 
 .webDev {
-  margin-top: 3rem;
-  background-image: url("https://app.salesdrip.com/users/myteam42369/Media1725.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  height: 25rem;
+  margin-top: 2rem;
+  box-shadow: 2px 5px 10px #444;
+  border-radius: 10px;
+  height: 30rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.half ul li {
+  margin: 1rem 0;
+}
+
+.half ul {
+  margin: 0;
+}
+
+.SD_info {
+  border-top: 5px solid #ff6600;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 10px;
+}
+
+#moreSD {
+  background-color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: 900;
+  cursor: pointer;
+  border: 5px solid #ff6600;
+  transition: all 300ms ease;
+  padding:0 1rem;
+}
+
+#moreSD:hover {
+  border-color: white;
+  background-color: #444;
+  color: #ff6600;
 }
 /*-- prerequisite --*/
 
@@ -496,12 +536,14 @@ button:focus {
   align-items: center;
   padding-bottom: 2rem;
   padding-top: 2rem;
-  width: 100%;
+  width: 80%;
+  height: 35rem;
   border-radius: 20px;
+  box-shadow: 5px 5px 15px #999;
 }
 
 .laptop-bg img {
-  width: 60%;
+  width: 50%;
 }
 
 .column {
@@ -515,7 +557,7 @@ button:focus {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  width: 70%;
+  width: 25rem;
   height: auto;
   padding: 0 3rem;
   background-color: rgba(255, 102, 0, 0.9);
@@ -523,24 +565,28 @@ button:focus {
 
 .left_box h3 {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .column p {
-  margin-top: 2rem;
-  width: 95%;
+  margin-top: 1rem;
+  width: 85%;
   color: black;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: normal;
 }
 
 .logo_content {
-  width: 100%;
-  height: 30rem;
   margin-top: 5rem;
   display: flex;
   justify-content: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  width: 80%;
+  height: 25rem;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #999;
 }
 
 .left_fade {
@@ -548,23 +594,25 @@ button:focus {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  width: 30%;
-  height: 24rem;
-  background-color: rgba(255, 102, 0, 0.9);
 }
 
 .left_fade h3 {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   width: 90%;
   margin-bottom: 0;
+  width: 25rem;
+  height: auto;
+  padding: 2rem 3rem;
+  background-color: rgba(255, 102, 0, 0.9);
 }
 
 .left_fade p {
-  color: white;
-  width: 90%;
-  font-size: 1.3rem;
+  margin-top: 2rem;
+  width: 75%;
+  color: black;
+  font-size: 1.1rem;
   font-weight: normal;
 }
 
@@ -576,7 +624,6 @@ button:focus {
   color: black;
   width: 50%;
   height: 24rem;
-  background-color: rgba(210, 210, 210, 0.5);
 }
 
 .center_fade h3 {
@@ -587,8 +634,7 @@ button:focus {
 
 .center_fade p {
   width: 90%;
-  color: black;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: normal;
 }
 
@@ -606,7 +652,8 @@ button:focus {
 }
 
 .center_fade img:hover {
-  border-color: white;
+  border-color: rgb(230, 230, 230);
+  box-shadow: 2px 5px 5px #999;
 }
 
 .split {
@@ -614,13 +661,83 @@ button:focus {
   justify-content: center;
   align-items: center;
 }
+/*-- Rebuild --*/
+
+.rebuild {
+  width: 100%;
+  margin-top: 10rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 35rem;
+  background-color: white;;
+  display: none;
+}
+
+/*-- About the websites --*/
+
+.about {
+  width: 100%;
+  margin-top: 10rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 35rem;
+  background-color: white;
+  display: none;
+}
+
+/*-- Forms --*/
+
+.startForm {
+  margin-top: 10rem;
+  width: 80%;
+  height: 10rem;
+  background-color: #444;
+  color: white;
+  font-family: 'Raleway',sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startForm p {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+.startForm h3 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  width: 35%;
+  height: 100%;
+  background-color: #ff6600;
+}
+
+.startForm form {
+  width: 20rem;
+}
+
+.startForm form input {
+  height: 3rem;
+  width: 8rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+}
 
 /*-- Footer --*/
 footer {
   display: none;
 }
-
-
 
 
 /*-- Navigation --*/

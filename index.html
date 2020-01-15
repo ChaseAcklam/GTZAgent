@@ -6,8 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/master.css">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://app.salesdrip.com/users/myteam42369/Media1732.css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,800,900|Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Scroll to Top Function-->
 <script>
 $(window).scroll(function() {
   if($(document).scrollTop() > 200){
@@ -39,22 +41,66 @@ $(window).scroll(function(){
     }
 });
 
+</script>
+<!-- Fade Main Logo -->
+<script>
 $(window).scroll(function(){
     $(".logo").css("opacity", 1 - $(window).scrollTop() / 150);
   });
-
-
-
+</script>
+<!-- Page Guidance Functions -->
+<script>
   $(document).ready(function(){
     $("#instruct_start").click(function(){
       $(".prerequisite").css("display","flex");
     });
 
-    $('html, body').animate({
-      scrollTop: ($('.prerequisite').offset().top)
-  });
   });
 
+    $(document).ready(function(){
+      $("#instruct_build").click(function(){
+        $(".rebuild").css("display","flex");
+      });
+    });
+
+    $(document).ready(function(){
+      $("#instruct_about").click(function(){
+        $(".about").css("display","flex");
+      });
+    });
+    </script>
+    <!-- Hide Guidance pages on click -->
+    <script>
+    $(document).ready(function(){
+      $("#instruct_start").click(function(){
+        $(".rebuild").css("display","none");
+        $(".about").css("display","none");
+      });
+
+    });
+
+    $(document).ready(function(){
+      $("#instruct_build").click(function(){
+        $(".prerequisite").css("display","none");
+        $(".about").css("display","none");
+      });
+
+    });
+
+    $(document).ready(function(){
+      $("#instruct_about").click(function(){
+        $(".prerequisite").css("display","none");
+        $(".rebuild").css("display","none");
+      });
+
+    });
+    </script>
+
+
+
+
+  <!-- Agent Support page Toggle -->
+  <script>
   $(document).ready(function(){
     $("#crm_auto").click(function(){
       $(".CRM").fadeIn().css("display", "flex");
@@ -62,24 +108,31 @@ $(window).scroll(function(){
     });
 
   });
-
   $(document).ready(function(){
     $("#webDev").click(function(){
       $(".CRM").fadeOut().css("display", "none");
       $(".webDev").fadeIn().css("display", "flex");
     });
+  });
 
+  $(document).ready(function(){
+    $("#moreSD").click(function(){
+      $(".CRM").fadeIn().css("display", "flex");
+      $(".webDev").fadeOut().css("display", "none");
+    });
   });
 
 
-
+</script>
+<!-- Visual counting variables -->
+<script>
   $(document).ready(function(){
     $("#crm_auto").click(function(){
       $('.count').each(function () {
     $(this).prop('Counter', 0).animate({
             Counter: $(this).data('value')
         }, {
-        duration: 800,
+        duration: 1500,
         easing: 'swing',
         step: function (now) {
             $(this).text(Math.ceil(now));
@@ -87,15 +140,46 @@ $(window).scroll(function(){
     });
 });
     });
-
   });
 
+  $(document).ready(function(){
+    $("#moreSD").click(function(){
+      $('.count').each(function () {
+    $(this).prop('Counter', 0).animate({
+            Counter: $(this).data('value')
+        }, {
+        duration: 1500,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+    });
+  });
+</script>
+<!-- Toggle Agent Support page button background -->
+<script>
+$(document).ready(function(){
+  $("#crm_auto").click(function(){
+    $("#webDev").css("background-position", "400% -100%");
+    $("#crm_auto").css("background-position", "400% 100%");
+  });
+});
 
+$(document).ready(function(){
+  $("#webDev").click(function(){
+    $("#webDev").css("background-position", "400% 100%");
+    $("#crm_auto").css("background-position", "400% -100%");
+  });
+});
 
-
-
-
-
+$(document).ready(function(){
+  $("#moreSD").click(function(){
+    $("#webDev").css("background-position", "400% -100%");
+    $("#crm_auto").css("background-position", "400% 100%");
+  });
+});
 </script>
 </head>
 <body>
@@ -162,7 +246,7 @@ $(window).scroll(function(){
       </p>
       </div>
     </div>
-<!--- Scroll Down Page Head Section ------------------------------------------->
+<!--- Scroll Down Page Head Section -->
 <div class="headsection">
       <div class="uppersection">
         <div class="head_contact">
@@ -219,7 +303,7 @@ $(window).scroll(function(){
 
 
 
-  <!------------------------------------- Body Section ------------------------------------------->
+  <!-- Body Section -->
   <div class="page_content">
     <div class="logo">
       <img src="https://app.salesdrip.com/users/myteam42369/Media1716.svg" alt="">
@@ -249,7 +333,7 @@ $(window).scroll(function(){
           <p>Your website often sets the first impression for your company. What are you conveying to
             your prospects and customers? If you're not satisfied and need a refresh - we've got you covered. </p>
           <div class="go_button">
-              <button class="main_button" id="instruct_build">Go ➜</button>
+            <a href="#rebuild"><button class="main_button" id="instruct_build">Go ➜</button></a>
           </div>
         </div>
         </div>
@@ -260,28 +344,32 @@ $(window).scroll(function(){
           <p>SalesDrip specializes in the freight & logistics industry and we know what content resonates
              with traffic managers. Our websites are hand made from scratch by our own in-house developers.</p>
           <div class="go_button">
-            <button class="main_button" id="instruct_about">Go ➜</button>
+          <a href="#about"><button class="main_button" id="instruct_about">Go ➜</button></a>
           </div>
         </div>
       </div>
     </div>
     </div>
-    <div class="start" data-aos="fade-up" data-aos-delay="100">
+    <div class="start" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-delay="100">
       <h2 style="width: 60%;"><img src="https://app.salesdrip.com/users/myteam42369/Media1710.png" alt="">Providing solutions to GlobalTranz <br>Agents for the past four years: </h2>
-      <div class="options">
-        <button id="crm_auto">CRM that includes Sales & Marketing Automation</button>
-        <button id="webDev">Website Design, Development & Hosting</button>
-      </div>
+
       <div class="solution_boxes">
         <div class="solution">
           <div class="webDev">
-          <div class="white_box">
-            SalesDrip is a cloud based CRM platform that incorporates a proven automated sales & drip marketing system.<br><br>
-             Our marketing team writes 60 drip marketing emails that match your website's branding and our dev team builds
-             custom automation to fit the needs and processes of individual agents. <br> <br>We provide unlimited training,
-             customer service and tech support at no additional cost. <br> <br> <a href="#">Schedule a Demo ⇨</a>
-          </div>
-
+            <div class="box_content" style="border: none; height: 100%;">
+              <div class="half" style="border-right: 5px solid #ff6600; background-color: rgba(210, 210, 210, 0.5); width: 50%; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                <h3 style="width: 70%; line-height: 3.5rem; font-size: 3rem;">
+                <span style="color:#ff6600;">Developing</span>   GlobalTranz Agent's unique <span style="color:#ff6600;">brand</span> and <span style="color:#ff6600;">positioning</span> in the market.</h3>
+              </div>
+              <div class="half column" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-left: 5px solid #ff6600; background-color: #444; width: 50%; color:white; justify-content: center; display: flex; ">
+                  <p style="border-bottom: 5px solid #ff6600;background-color: white; height: 50%; width: 100%; text-align: center; margin: 0; line-height: 3rem;
+                  display: flex; align-items: center; justify-content: center; font-size: 2rem; border-top-right-radius: 10px;">
+                    Website Design <br> Construction <br> Hosting <br> Rebuild + Refresh Existing site </p>
+                <div class="SD_info">
+                  <button id="moreSD"> <h3>More on SalesDrip ⇨</h3></button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -317,6 +405,10 @@ $(window).scroll(function(){
         </div>
 
       </div>
+      <div class="options">
+        <button id="crm_auto">CRM that includes Sales & Marketing Automation</button>
+        <button id="webDev">Website Design, Development & Hosting</button>
+      </div>
 
     </div>
     <div id="prerequisite"></div>
@@ -328,24 +420,25 @@ $(window).scroll(function(){
           </div>
           <p>A domain name is the address where Internet users can access your website. It is beneficial if your domain name
             is similar to your company name. <br> <br> At SalesDrip, we use and suggest a company named  "GoDaddy"
-             to register domains. When you select a domain name , GoDaddy will attempt to upsell you many
-             different services. SalesDrip will be building your website, hosting and providing your SSL
-             certificate so you don't need those services. <br> <br> It is best practice to have your email address
-             match your website domain. We suggest using Gmail's business suite as opposed to others
-             such as Microsoft Exchange. GoDaddy will try to sell you Microsoift's email services.
-              We can work with either, but feel that Gmail is a stronger product at a better value. <br> <br> *We
+             to register domains. When you select a domain name, GoDaddy will attempt to upsell you many
+             different services. SalesDrip will be building and hosting your website, and providing your SSL
+             certificate. We provide those services for you. <br> <br>Your email address should closely match your website domain.
+               We suggest using Gmail's business suite as opposed to others such as Microsoft Exchange. Gmail
+               is a stronger product, a better value and has a proven successful track record from our experience.
+               <br> <br> *We
                do not receive compensation for the above referrals. </p>
                </div>
         <img src="https://app.salesdrip.com/users/myteam42369/Media1719.png" alt="">
       </div>
-      <div class="logo_content">
+      <div class="logo_content">.
         <div class="left_fade" data-aos="fade-right" data-aos-delay="300" data-aos-once="true">
           <h3>Now, it's time to get your company logo.</h3>
           <p>This is the foundation of your brand identity, your company logo makes you unqiue from the competition and is responsible for
-          creating that strong first impression. A well-designed logo will convey to consumers that your business is professional, and offers quality services.</p>
+          creating that strong first impression. A well-designed logo will convey to consumers that your business is professional, and offers
+          quality services.</p>
         </div>
         <div class="center_fade" data-aos="fade-right" data-aos-delay="500" data-aos-once="true">
-          <p>Here are two of the resources we've used for economical logo design:</p>
+          <p style="font-weight: bold; color: #444; font-size: 1.6rem;">Here are two of the resources we've used for economical logo design:</p>
           <div class="image_container split">
           <a href="https://www.fiverr.com/" target="_blank">  <img src="https://app.salesdrip.com/users/myteam42369/Media1721.png" alt=""></a>
           <a href="https://99designs.com/" target="_blank">  <img src="https://app.salesdrip.com/users/myteam42369/Media1720.png" alt=""></a>
@@ -353,9 +446,58 @@ $(window).scroll(function(){
           <p>After you've selected your design, be certain to acquire a "vector" file, a ".jpeg" file and a ".png" file of the artwork. </p>
         </div>
       </div>
+      <div class="startForm">
+        <h3>Send in your form.</h3> <p>Don't worry, by completeing this form you are not commiting to anything. This is
+        simply to provide us some insight as to what your needs are. We'll reach out to you after reviewing the form and schedule a meeting!</p>
+        <div class="form">
+        <form method="post" action="//app.salesdrip.com/j1.pl?9ec6ce8b4e17b30bdbee1d00a4f4e0a124884e7be7dd128aec9c012905aaba74" target="_blank">
+<input type="text" name="Email" size="20" value="Enter your email" onfocus="if (this.value == 'Enter your email') { this.value = ''; }" />
+<input type="submit" value="Go" />
+</form>
+      </div>
+      </div>
+    </div>
+    <div id="rebuild"></div>
+    <div class="rebuild">
+        <div class="column" style="width: 50%;">
+        <div class="left_box" data-aos="zoom-in" data-aos-delay="100" data-aos-once="true">
+          <h3>We dont take shortcuts.</h3>
+          </div>
+          <p style="text-align: center;">When we rebuild a website, we start completely from scratch. There is no need to
+            locate your website files or contact your previous development team. You don’t need to worry
+            about taking your website down during the rebuild process. All we need is the link to your current website, a list of
+            changes you'd like to see, and any content you would like added. <br> <br> We don't out-source our work,
+           all websites are built in-house. We practice proper verison control, and store all our work in the cloud. We will also
+            provide you updates throughout the build process, and will offer our marketing recommendations at no extra cost.  </p>
+               </div>
+
+               <div class="column" style="width: 50%;">
+               <div class="left_box" data-aos="zoom-in" data-aos-delay="100" data-aos-once="true">
+                 <h3>Keep your theme or start fresh.</h3>
+                 </div>
+                 <p style="text-align: center;">
+                   We can update your current theme and style to convey your company’s professionalism and quality service, or we
+                   can help provide you with a new company image to better suit your brand - at no extra cost. <br> <br>
+                   We've been in your shoes, we know you're busy, and we understand your needs. If you need to update your site but
+                   dont have the time, we're your go-to. After our team has worked with you to settle on a style, we can write out
+                   the majority of your content, and integrate a GTZ login on your website. We can build a technology page featuring
+                   GTZ Ship, or help you brand your own.
+
+                 </p>
+                 </div>
+      <div class="form">
+        <form method="post" action="//app.salesdrip.com/j1.pl?9ec6ce8b4e17b30bdbee1d00a4f4e0a124884e7be7dd128aec9c012905aaba74" target="_blank">
+<input type="text" name="Email" size="20" value="Enter your email" onfocus="if (this.value == 'Enter your email') { this.value = ''; }" />
+<input type="submit" value="Go" />
+</form>
+      </div>
+    </div>
+    <div id="about"></div>
+    <div class="about">
+      <p>test</p>
     </div>
   </div>
-  <!------------------------------------- Footer Section ------------------------------------------->
+  <!-- Footer Section -->
   <div class="scroll_dark" onclick="window.scrollTo(0, 0);">
     <img src="https://app.salesdrip.com/users/myteam46201/Media149.png" alt="">
   </div>
